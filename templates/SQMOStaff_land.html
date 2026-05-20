@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQMO Accreditation Portal</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/SQMOStaff_land.css') }}">
+</head>
+
+<body>
+
+<div id="Main_bkgrnd">
+
+
+    <div id="header">
+
+        <img src="/static/img/XU_header.png" alt="XU_Header">
+
+        <div class="header-actions">
+            <button id="addBtn" class="log_outbtn" style="display:none;">+ Add Program</button>
+            <button id="adminToggle" class="log_outbtn">Edit: OFF</button>
+            <button class="log_outbtn" onclick="location.href='/'">Log out</button>
+        </div>
+        
+    </div>
+
+    <div class="admin-info">
+        <h2>Program Management</h2>
+        <p>Add, Delete, Edit Programs</p>
+    </div>
+    <div id="programs"></div>
+    <div class="access-panel">
+    <h2>Access Management</h2>
+    <p>Grant access to authorized personnel</p>
+
+    <form class="access-form" method="post" action="#">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <select name="program_id" id="programSelect" required>
+            <option value="" disabled selected>Select Program</option>
+        </select>
+        <button type="submit">Grant Access</button>
+    </form>
+</div>
+</div>
+<script src="/static/js/SQMOStaff_land.js"></script>
+</body>
+</html>

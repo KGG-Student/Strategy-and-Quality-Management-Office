@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SQMO Staff Report Portal</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/SQMOStaff_report.css') }}">
+</head>
+
+<body>
+
+<div id="header">
+    
+    <img src="/static/img/XU_header.png" alt="XU_Header">
+    
+
+    <div class="header-right">
+        <button class="edit_btn" onclick="toggleEdit()">Edit: OFF</button>
+        <button class="log_outbtn" onclick="location.href='/'">Log out</button>
+        
+    </div>
+</div>
+
+<div class="header">
+  <h1>Report Lists</h1>
+  <p>Quality Management Office</p>
+</div>
+
+<div id="Primary_reports">
+    <button class="report_btn" data-key="leadership">Leadership and Governance</button>
+    <button class="report_btn" data-key="qa">Quality Assurance</button>
+    <button class="report_btn" data-key="resource">Resource Management</button>
+    <button class="report_btn" data-key="teaching">Teachings and Learnings</button>
+    <button class="report_btn" data-key="student">Student Service</button>
+    <button class="report_btn" data-key="external">External Relations</button>
+    <button class="report_btn" data-key="research">Research</button>
+    <button class="report_btn" data-key="results">Results</button>
+</div>
+
+<div id="Secondary_reports">
+    <button class="ndreport_btn" data-key="appendices">Appendices</button>
+    <button class="ndreport_btn" data-key="materials">Other Materials</button>
+    <button class="ndreport_btn" data-key="additional">Additional Documents + Requested</button>
+    <button class="ndreport_btn" data-key="others">Other Documents</button>
+</div>
+<script>const PROGRAM_ID = "{{ program_id }}";</script>
+<script src="/static/js/SQMOStaff_report.js"></script>
+
+</body>
+</html>

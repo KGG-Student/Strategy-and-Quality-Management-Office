@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#Main_bkgrnd {
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-school-sub {
+      font-size: 11px;
+      color: #a0b0d0;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+#header {
+    background-color: #283971;
+    height: 80px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+}
+
+#header img {
+    height: 50px;
+    width: auto;
+}
+
+.admin {
+    margin-left: auto;
+
+    background-color: #b99430;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    padding: 10px 25px;
+}
+
+.admin:hover {
+    background-color: #786021;
+}
+
+#programs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 20px;
+
+    width: min(90%, 1400px);
+    margin: 10px auto 15px;
+}
+
+
+.program_btn {
+    background-color: #3a52a3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+
+    aspect-ratio: unset;   /* removes the 1:1 ratio */
+     height: 150px; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;          
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: 10px;
+
+    cursor: pointer;
+    overflow: hidden;
+    word-break: break-word;
+    line-height: 1.1;
+
+    transition: 0.2s ease;
+}
+
+.program_btn:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+
+
+ .header {
+     text-align: center;
+      margin-top: 2rem;   
+      margin-bottom: 2rem;
+    }
+ 
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a2a5e;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+ 
+    .header p {
+      font-size: 13px;
+      color: #7a8aaa;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+
+    

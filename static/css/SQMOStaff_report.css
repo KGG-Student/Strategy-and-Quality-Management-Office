@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;        /* lock to screen height */
+    overflow: hidden;     /* no scrolling */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Navbar ── */
+#header {
+    background-color: #283971;
+    height: 70px;
+    padding: 0 30px;
+    flex-shrink: 0;       /* navbar never shrinks */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header img {
+    height: 50px;
+    width: auto;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit_btn,
+.log_outbtn {
+    background-color: #b99430;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;      /* reduced from 20px */
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.edit_btn {
+    padding: 8px 18px;
+}
+
+.log_outbtn {
+    padding: 8px 25px;
+}
+
+.edit_btn:hover,
+.log_outbtn:hover {
+    background-color: #786021;
+}
+
+/* ── Main background fills remaining height ── */
+#Main_bkgrnd {
+    flex: 1;              /* fills all space below navbar */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+/* ── Page title ── */
+.header {
+    text-align: center;
+    margin-bottom: 10px;  /* reduced from 2rem */
+    flex-shrink: 0;
+}
+
+.header h1 {
+    font-size: 22px;      /* reduced from 28px */
+    font-weight: 700;
+    color: #1a2a5e;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.header p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #7a8aaa;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ── Primary report cards ── */
+#Primary_reports {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);  /* 2 equal rows */
+    gap: 12px;
+    width: min(95%, 1400px);
+    margin: 0 auto;
+    flex: 1;              /* fills remaining space */
+}
+
+.report_btn {
+    background-color: #3a52a3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    /* REMOVED aspect-ratio: 1 / 1 */
+    width: 100%;
+    height: 100%;         /* fills grid cell */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    word-break: break-word;
+    line-height: 1.3;
+
+    transition: 0.2s ease;
+}
+
+.report_btn:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+/* ── Secondary/pill buttons ── */
+#Secondary_reports {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    width: min(95%, 1400px);
+    margin: 10px auto 0;
+    flex-shrink: 0;
+}
+
+.ndreport_btn {
+    width: 100%;
+    height: 38px;
+    background-color: #3a52a3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    text-align: center;
+    padding: 4px 8px;
+
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.1;
+
+    transition: 0.2s ease;
+}
+
+.ndreport_btn:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+/* ── Program buttons (Landing Page) ── */
+#programs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    width: min(95%, 1400px);
+    margin: 20px auto;
+}
+
+.program-wrapper {
+    position: relative;
+}
+
+.program_btn {
+    background-color: #3a52a3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 150px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    word-break: break-word;
+    line-height: 1.3;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.program_btn:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+.controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    gap: 5px;
+}
+
+.controls button {
+    border: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.editBtn {
+    background: #f0c040;
+}
+
+.deleteBtn {
+    background: #d9534f;
+    color: white;
+}

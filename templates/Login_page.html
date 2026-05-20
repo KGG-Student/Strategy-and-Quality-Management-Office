@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/Login_page.css') }}">
+</head>
+
+<body>
+  <div class="login_container">
+
+    <img src="/static/img/XU_logo.png" alt="XU_Logo">
+    <h2>Login to SQMO Accreditation Portal</h2>
+	<h3>Use google account only</h3>
+
+    <div class="G_sync">
+
+      <button class="sson" onclick="location.href='/report_list/{{ program_id }}'">
+        <img src="/static/img/Accreditor.png" alt="icon">
+        <span>PAASCU Accreditors</span>
+      </button>
+
+      <button class="sson" onclick="location.href='/report_list/{{ program_id }}'">
+        <img src="/static/img/xu_admin.png" alt="icon">
+        <span>XU Admin</span>
+      </button>
+
+      <button class="sson" onclick="location.href='/sqmostaff_report/{{ program_id }}'">
+        <img src="/static/img/SQMO_staff.png" alt="icon">
+        <span>SQMO Staff</span>
+      </button>
+
+    </div>
+
+  </div>
+</body>
+</html>

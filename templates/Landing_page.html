@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Landing Page</title>
+
+	  <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/Landing_Page.css') }}">
+    
+
+</head>
+
+<body>
+    
+
+    <div id="Main_bkgrnd">
+        <div id="header">
+            <img src="/static/img/XU_header.png" alt="XU_Header">
+              <button class="admin" onclick="location.href='/login_sqmo'">SQMO Staff</button>
+          
+        </div> 
+     
+        <div class="header">
+      <h1>Programs</h1>
+      <p>Select a program to continue</p>
+    </div>
+
+
+    
+        <div id="programs">
+
+    {% for program in programs %}
+
+        <a 
+            href="/login/{{ program.id }}"
+            class="program_btn"
+        >
+            {{ program.p_name }}
+        </a>
+
+    {% endfor %}
+
+</div>
+    </div>
+</body>
+</html>
