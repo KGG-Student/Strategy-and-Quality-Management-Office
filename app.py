@@ -8,9 +8,14 @@ app = Flask(__name__)
 
 DB_CONFIG = {
     "host": os.getenv("MYSQL_HOST", "localhost"),
+    "port": int(os.getenv("MYSQL_PORT", "3306")),
     "user": os.getenv("MYSQL_USER", "root"),
     "password": os.getenv("MYSQL_PASSWORD", "12345!"),
+    "database": os.getenv("MYSQL_DATABASE", "sqmo"),
 }
+
+if os.getenv("MYSQL_SSL_MODE", "").lower() in ("required", "true", "1"):
+    DB_CONFIG["ssl_disabled"] = False
 
 
 def connect_to_mysql(retries=20, delay=2):
@@ -29,8 +34,6 @@ if db.is_connected():
     print("Connected to MySQL database")
 
 cursor = db.cursor()
-cursor.execute("CREATE DATABASE IF NOT EXISTS sqmo")
-cursor.execute("USE sqmo")
 cursor.execute("""
 CREATE TABLE IF NOT EXISTS programs (
 	id INT AUTO_INCREMENT PRIMARY KEY,
